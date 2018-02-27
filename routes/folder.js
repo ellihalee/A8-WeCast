@@ -4,6 +4,7 @@
  */
 //Get folder data
 var data = require('../data.json');
+var sharedData = require('../sharedData.json');
 //Lets us see the size of JSON
 var _ = require('underscore');
 
@@ -18,12 +19,23 @@ exports.view = function(req, res){
     }
   }
 
-// Find folder name 
+// Find folder name and sync code 
   var folderName; 
+  var syncCode;
 
   for(var i = 0; i < _.size(data.folders); i++){
     if(data.folders[i].folderID == req.params.folderID){
       folderName = data.folders[i].name;
+      syncCode = data.folders[i].sync;
+    }
+  }
+
+// Find shared notes
+  var syncedNotes = new Array();
+  
+  for(var i = 0; i < _.size(sharedData.notes); i++){
+    if(sharedData.notes[i].sync == syncCode){
+      syncedNotes.push(sharedData.notes[i]);
     }
   }
 
@@ -32,5 +44,7 @@ exports.view = function(req, res){
     folderName: folderName,  
     folderID: req.params.folderID,
     notes: folderNotes, 
+    syncCode: syncCode,
+    syncedNotes: syncedNotes,
   });
 };

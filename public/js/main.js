@@ -14,6 +14,10 @@ $(document).ready(function() {
 
 //Functions:
 
+// Enable Popovers
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})
 
 //Sample Function
 function initializePage(){
