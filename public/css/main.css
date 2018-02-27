@@ -1,0 +1,143 @@
+/* applies to anything of class "example-class-selector" */
+.example-class-selector {
+	margin-top: 2em;
+}
+
+/* applies to any <p> descendants of an element of class "example-class-selector" */
+.example-class-selector p {
+	/* Colors are in hexadecimal: http://www.colorpicker.com/ */	
+	color: #CC00AA;
+}
+
+.page-title {
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+/* provides a margin to all headers in placeholder pages */
+.placeholder-title {
+	margin-left: 20px;
+}
+
+body { 
+    padding-top: 65px; /* To make sure the nav doesn't cover the content */  
+}
+
+.add {
+	right: 5%;
+	bottom: 5%;
+	position: fixed;
+}
+.back {
+	position:fixed;
+	bottom:4%;
+	left: 5%;
+}
+/*login page layout */ 
+#login_center{ /*login text in the navbar */
+	width: 100%;
+	margin:auto;
+	margin-top: 5%;
+	text-align: center;
+	font-family: Lato;
+	font-size: 20px;
+	list-style-type: none;
+	> li {
+		float: none;
+		list-style-type: none;
+		display: inline-block;
+	}
+}
+
+#login_page {
+	margin: auto;
+	margin-top: 10%;
+}
+
+#login_id {
+	margin:0 auto;
+	margin-top: 10%;
+}
+
+#login_pw {
+	margin:0 auto;
+	margin-top: 5%;
+	padding-bottom: 10%;
+}
+
+.button {
+	font-family: Serif;
+	border: 1px solid #23221d;
+} 
+
+/* Facebook login button */
+.facebooklogin {
+	padding-top: 5%;
+	margin:auto;
+}
+
+.fb_btn {
+	padding-top: 10%;
+	padding-left: 30%;
+}
+
+/* end of login page css */
+
+.all_btn {
+	align:center;
+}
+.col-xs-4 span {
+	margin-left: 20px;
+}
+#wrapper {
+	height:100%;
+   width: 100%;
+   margin: 0;
+   padding: 0;
+   border: 0;
+}
+
+#wrapper td{
+
+	vertical-align: middle;
+	text-align: center;
+}
+
+.fifth_row {
+width: 100%;
+}
+
+#round_bookmark {
+	padding-top:10px;
+	margin-right:10px;
+	padding-top:5%;
+} 
+
+#round_camera {
+	position:relative;
+	padding-top: 10px;
+	margin-left:10px;
+	padding-top:5%;
+}
+
+#the_5th_row {
+	margin: auto;
+	margin-top: 10px;
+	padding-top:5%;
+}
+
+#mic_btn {
+	padding-left: 5%;
+	padding-top:10px;
+}
+
+#recording_btn{
+	position: relative;
+	padding-left: 10%;
+}
+
+#done_btn {
+	position: relative;
+	padding-top:15px;
+}
+
