@@ -19,6 +19,12 @@ $(function () {
   $('[data-toggle="popover"]').popover()
 })
 
+//Closes the Folder Settings Popover
+function closeSettings(){
+  document.getElementById("editFolder").reset();
+  $("#settingsPopover").popover("hide");
+}
+
 //Sample Function
 function initializePage(){
 	console.log("Javascript connected!");  

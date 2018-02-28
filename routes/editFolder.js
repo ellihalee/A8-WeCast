@@ -2,7 +2,6 @@ var data = require("../data.json");
 var _ = require('underscore');
 
 exports.editFolder = function(req, res) {   
-
   //Change Folder Name
   if(req.query.newFolderName != (null || '' || "")){
     for(var i = 0; i < _.size(data.folders); i++){
@@ -20,9 +19,13 @@ exports.editFolder = function(req, res) {
         break;
       }
     }    
-    res.redirect('/index');
   }
 
   console.log(data);
-  res.redirect('/folder/' + req.params.folderID);
+  if(req.query.confirmDelete == "DELETE"){
+    res.redirect('/index');
+  } 
+  else{ 
+    res.redirect('/folder/' + req.params.folderID);
+  }
 };
