@@ -31,7 +31,13 @@ body {
 
 .settings {
 	position:fixed;
-	top:8%;
+	top:7.5%;
+	right: 3%;
+}
+
+.sync {
+	position:fixed;
+	top:11.75%;
 	right: 3%;
 }
 
