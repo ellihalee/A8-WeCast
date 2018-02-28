@@ -28,6 +28,13 @@ body {
 	bottom: 5%;
 	position: fixed;
 }
+
+.settings {
+	position:fixed;
+	top:8%;
+	right: 3%;
+}
+
 .back {
 	position:fixed;
 	bottom:4%;
