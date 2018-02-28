@@ -41,12 +41,11 @@
     </nav>
 
   <div class="container">
-    <div class="page-title">
+    <div class="folder-title">
       <h4>{{folderName}}</h4>
-
       <!-- Sync Button -->
       <div class="sync">
-      <button type="button" class="btn btn-success" data-placement="bottom" data-toggle="popover" data-trigger="click" data-html="true" title="Sync Code"  data-content="
+      <button type="button" class="btn btn-success btn-sm" data-placement="bottom" data-toggle="popover" data-trigger="click" data-html="true" title="Sync Code"  data-content="
         Sync Code:
         <form id='changeSync' role='form' method='get' action='/changeSync/{{folderID}}'> 
           <input type='text' class='form-control' id='syncCode' placeholder='{{syncCode}}' name='syncCode'>
@@ -54,9 +53,26 @@
         Adding a Sync Code will sync your notes with other people using the same code (Change this text)
         ">Sync
       </button>
+
+      <!--Folder Settings Button-->
+  <div class ="settings">
+    <button type="button" id="settingsPopover" class="btn btn-default btn-sm" data-placement="bottom" data-toggle="popover" data-trigger="click" data-html="true" title="Edit Folder"  data-content="
+      <form id='editFolder' role='form' method='get' action='/editFolder/{{folderID}}'> 
+        Edit Folder name:
+          <input type='text' class='form-control' id='newFolderName' placeholder='{{folderName}}' name='newFolderName'>
+        Delete Folder:
+          <input type='text' class='form-control' id='confirmDelete' placeholder='Type DELETE' name='confirmDelete'>
+
+
+        <button type='button' class='btn btn-secondary btn-sm' onclick='closeSettings()'>Cancel</button>
+        <button type='button submit' id='saveFolderChanges' class='btn btn-primary btn-sm'>Save</button>
+      </form>
+      "><span class="glyphicon glyphicon-cog"></span> Edit Folder
+    </button>
+      </div>
+    </div>  
     </div>
-      
-    </div>
+
     <div class="row">
       <div class="col-xs-6 form-group">
         <input type="text" class="form-control" id="filter" value="Search">
@@ -89,25 +105,6 @@
         <div class="col-xs-6">{{date}}</div>
       </div>
     {{/each}}
-  </div>
-
-
-  <!--Folder Settings Button-->
-  <div class ="settings">
-    <button type="button" id="settingsPopover" class="btn btn-info btn-sm" data-placement="bottom" data-toggle="popover" data-trigger="click" data-html="true" title="Edit Folder"  data-content="
-      <form id='editFolder' role='form' method='get' action='/editFolder/{{folderID}}'> 
-        Edit Folder name:
-          <input type='text' class='form-control' id='newFolderName' placeholder='{{folderName}}' name='newFolderName'>
-        Delete Folder:
-          <input type='text' class='form-control' id='confirmDelete' placeholder='Type DELETE' name='confirmDelete'>
-
-
-        <button type='button' class='btn btn-secondary btn-sm' onclick='closeSettings()'>Cancel</button>
-        <button type='button submit' id='saveFolderChanges' class='btn btn-primary btn-sm'>Save</button>
-      </form>
-      "><span class="glyphicon glyphicon-cog"></span> Edit Folder
-    </button>
-
   </div>
 
 

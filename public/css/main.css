@@ -9,9 +9,18 @@
 	color: #CC00AA;
 }
 
+h4 {
+	display: inline;
+}
+
 .page-title {
 	margin-bottom: 30px;
 	text-align: center;
+}
+
+.folder-title {
+	margin-bottom: 30px;
+	text-align: left;
 }
 
 /* provides a margin to all headers in placeholder pages */
@@ -29,16 +38,15 @@ body {
 	position: fixed;
 }
 
+
 .settings {
-	position:fixed;
-	top:7.5%;
-	right: 3%;
+	display:inline-block;
 }
 
 .sync {
-	position:fixed;
-	top:11.75%;
-	right: 3%;
+	display:inline-block;
+	margin-left:110px;
+	margin-right:10px;
 }
 
 .back {
