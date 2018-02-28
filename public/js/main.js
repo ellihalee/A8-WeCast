@@ -16,7 +16,7 @@ $(document).ready(function() {
 
 // Enable Popovers
 $(function () {
-  $('[data-toggle="popover"]').popover()
+  $('[data-toggle="popover"]').popover({container: 'body'})
 })
 
 //Closes the Folder Settings Popover

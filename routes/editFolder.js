@@ -15,12 +15,11 @@ exports.editFolder = function(req, res) {
   if(req.query.confirmDelete == "DELETE"){
     for(var i = 0; i < _.size(data.folders); i++){
       if(data.folders[i].folderID == req.params.folderID){
-        delete data.folders[i];
+        data.folders.splice(i,1);
         break;
       }
     }    
   }
-
   console.log(data);
   if(req.query.confirmDelete == "DELETE"){
     res.redirect('/index');
