@@ -12,6 +12,10 @@ var handlebars = require('express3-handlebars')
 var login = require('./routes/login'); //calling login.js
 var index = require('./routes/index');
 var note = require('./routes/note');
+
+// note_B for A/B testing
+var noteB = require('./routes/note_B');
+
 var folder = require('./routes/folder');
 var profile = require('./routes/profile');
 var logout = require('./routes/logout');
@@ -51,6 +55,10 @@ if ('development' == app.get('env')) {
 app.get('/', login.view); //login page
 app.get('/index', index.view);
 app.get('/note/:folderID', note.view);
+
+// note_B for A/B testing
+app.get('/note_B/:folderID', noteB.view);
+
 app.get('/folder/:folderID', folder.view);
 app.get('/profile', profile.view);
 app.get('/help', help.view);
