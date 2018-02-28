@@ -46,7 +46,7 @@
 
       <!-- Sync Button -->
       <div class="sync">
-      <button type="button" class="btn btn-success" data-placement="left" data-toggle="popover" data-trigger="click" data-html="true" title="Sync Code"  data-content="
+      <button type="button" class="btn btn-success" data-placement="bottom" data-toggle="popover" data-trigger="click" data-html="true" title="Sync Code"  data-content="
         Sync Code:
         <form id='changeSync' role='form' method='get' action='/changeSync/{{folderID}}'> 
           <input type='text' class='form-control' id='syncCode' placeholder='{{syncCode}}' name='syncCode'>
@@ -97,9 +97,9 @@
     <a href="#" class="btn btn-info btn-sm">
           <span class="glyphicon glyphicon-cog"></span> Edit Folder
     </a>
-    <button type="button" class="btn btn-info btn-sm" data-placement="left" data-toggle="popover" data-trigger="click" data-html="true" title="Edit Folder"  data-content="
+    <button type="button" class="btn btn-info btn-sm" data-placement="bottom" data-toggle="popover" data-trigger="click" data-html="true" title="Edit Folder"  data-content="
       Edit Folder name:
-      <form id='editFolder' role='form' method='get' action='/editFolder/{{folderID}}'> 
+      <form id='editFolder' role='form' method='get' action='/changeSync/{{folderID}}'> 
         <input type='text' class='form-control' id='syncCode' placeholder='{{syncCode}}' name='syncCode'>
       </form>
       Adding a Sync Code will sync your notes with other people using the same code (Change this text)

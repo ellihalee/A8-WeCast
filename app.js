@@ -25,6 +25,7 @@ var note_function = require('./routes/note_function');
 var addFolder = require('./routes/addFolder');
 var addNote = require('./routes/addNote');
 var changeSync = require('./routes/changeSync');
+var editFolder = require('./routes/editFolder');
 
 var app = express();
 
@@ -72,6 +73,7 @@ app.get('/note_function', note_function.view);
 app.get('/addFolder', addFolder.addFolder);
 app.get('/addNote/:folderID', addNote.addNote);
 app.get('/changeSync/:folderID', changeSync.changeSync);
+app.get('/editFolder/:folderID', editFolder.editFolder);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
