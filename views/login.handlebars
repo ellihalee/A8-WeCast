@@ -11,6 +11,7 @@
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
   <link href="/css/main.css" rel="stylesheet">
+  <script src ="/js/login.js"></script>
 </head>
 
 <body>
@@ -20,7 +21,7 @@
       <div class="container">
         <div class="navbar-header">
          <ul class = "navbar-nav" id = "login_center">
-           <li class = "center">Login</li>
+           <li class = "center"></li>
          </ul>
         </div>
       </div>
@@ -35,15 +36,14 @@
       </td>
       </tr>
     </table>
-    <br/>
+    <!-- 
     <p class="text-center">
-      <!-- For Effective Search -->
       A collaborative podcast application for school, work, and personal use.
       <br/>
       WeCast lets you record and annotate audio, as well as access audio shared
       by your peers so you can catch up on missed lectures or meetings.
       
-    </p>
+    </p> -->
     <div class = "login_info">
       <div class = "row">
         <div class = "col-xs-2"></div>
@@ -68,14 +68,70 @@
           <td><a href = "/index"><button class = "button" >LOGIN</button></a></td>
         </tr>
       </table>
-     </table>
 
      <!-- Login with Facebook -->
       <table id = "wrapper">
         <tr>
-          <td><p class ="facebooklogin"> Facebook Login:  <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"> </fb:login-button></p></td>
+          <td><p class ="facebooklogin"><fb:login-button scope="public_profile,email" onlogin="checkLoginState();"> </fb:login-button></p></td>
         <tr>
+     </table>
 
+           <!-- create new account --> 
+      <table id = "wrapper"> 
+        <tr>
+          <td>
+            <br>
+            <button id="myBtn">Create New Account</button>
+              <!-- The Modal -->
+              <div id="myModal" class="modal">
+
+                <!-- Within the Modal (pop-up window) -->
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <br>
+                  <br>
+                  <p>Please fill in this form to create an account</p>
+                  <!-- E-mail -->
+                  <table id ="wrapper">
+                    <tr>
+                      <td>
+                        <label for = "exampleInputEmail">E-mail address</label>
+                    <input type = "email" class = "form-control"  name = "userid" placeholder="Enter e-mail">
+                       </td>
+                    </tr>
+                  </table>
+                  <!-- Password -->
+                  <table id = "wrapper">
+                    <tr>
+                      <td>
+                        <label for = "exampleInputPW">Password</label>
+                        <input type = "password" class = "form-control" name = "password" placeholder= "Enter password">
+                      </td>
+                    </tr>
+                  </table>
+                  <!-- Reset Password -->
+                  <table id = "wrapper">
+                    <tr>
+                      <td>
+                        <label for = "exampleInputPW">Repeat Password</label>
+                        <input type = "password" class = "form-control" name = "password" placeholder= "Enter password">
+                      </td>
+                    </tr>
+                  </table>
+
+                  <!-- Enter button -->
+                  <table id = "wrapper">
+                    <tr>
+                      <td><a href = "/index"><button class = "confirm_btn"> CONFIRM </button></a></td>
+                    </tr>
+                  </table>
+
+
+                </div>
+                <!-- end of Modal content (popup window) --> 
+              </div>
+          </td>
+        </tr>
      </table>
 
   </div>

@@ -73,6 +73,8 @@ $("#recordButton2").click(function() {
   $("#recordButton").show();
 });
 
+
+
 //Sample Function
 function initializePage(){
 	console.log("Javascript connected!");  

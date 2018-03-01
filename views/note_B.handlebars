@@ -41,9 +41,10 @@
     </nav>
 
   <div class="container">
+    <!-- 
     <div class="page-title">
       <h4>Note Title</h4>
-    </div>
+    </div> -->
 
     <!-- Everything Here -->
     <div class = "all_btn">
@@ -53,7 +54,7 @@
           <td><img src = "/pics/recording_bar.png" width = "270" height = "170"></td>
         </tr>
         <tr>
-          <td><h2>5:20</h2></td> <!--recording time--> 
+          <td><h2 id="time">5:20</h2></td> <!--recording time--> 
         </tr>
         <tr>
           <td> <img src = "/pics/reminder.png" width = "275" height = "34"></td>
@@ -79,25 +80,71 @@
         
        </div>
 
-       <div class = "row" id = "the_5th_row"> <!-- recording, audio, done button -->
-        <div class = "col-xs-4" id = "mic_btn">
+       <!-- Note_B page edit --> 
+       <!-- recording, audio, done button -->
+       <div class = "row" id = "the_5th_row"> 
+        <div class = "col-xs-4" id = "mic_btn"> <!-- microphone -->
           <div class = "col-xs-2"></div>
           <div class = "col-xs-2">
             <a href = "/note_function"><img src = "/pics/round_audio.png" width = "70" height = "70" id="roundAudio"></a>
           </div>
         </div>
-        <div class = "col-xs-4" id = "recording_btn">
+        <div class = "col-xs-4" id = "recording_btn"> <!-- recording button--> 
             <img src = "/pics/red_record.png" width = "80" height = "80" id="recordButton">
             <img src = "/pics/red_pause.png" width = "80" height = "80" id="recordButton2">
 
         </div>
         <div class = "col-xs-4" id = "done_btn">
           <div class = "col-xs-2">
-            <a href = "/note_function"><img src = "/pics/done_btn.png" width = "65" height = "55" id="doneButton"></a>
+            <img src = "/pics/done_btn.png" width = "65" height = "55" id="doneButton" onclick="doneFunction()">
           </div>
           <div class = "col-xs-2"></div>
         </div>
        </div>
+
+       <!-- After the Done Button was pressed --> 
+       <div class ="tab">
+        <table id="wrapper_tab" style ="width:100%">
+          <tr>
+           <th><button class="tablinks" onclick="openTab(event, 'bookmark')" id="defaultOpen">Bookmark</button></th>
+           <th colspan ="2"><button class="tablinks" onclick="openTab(event, 'picture')">Picture</button></th>
+         </tr>
+       </table>
+       </div> <!-- end of tab --> 
+
+       <!-- Tab content -->
+       <div class="scrollmenu" >
+       <div id = "bookmark" class ="tabcontent">
+         <p>Lorem ipsum dolor sit amet</p>
+         <br>
+         <p>Duis aute irure dolor in reprehenderit</p>
+                  <br>
+         <p>Duis aute irure dolor in reprehenderit</p>
+                  <br>
+         <p>Duis aute irure dolor in reprehenderit</p>
+                  <br>
+         <p>Duis aute irure dolor in reprehenderit</p>
+                  <br>
+         <p>Duis aute irure dolor in reprehenderit</p>
+                  <br>
+         <p>Duis aute irure dolor in reprehenderit</p>
+       </div>
+
+       <div id = "picture" class="tabcontent">
+        <table id = "wrapper">
+          <tr>
+            <td> <img src="/pics/lec_1.jpg"></td>
+          </tr>
+          <tr>
+             <td> <img src="/pics/lec_2.jpg"></td>
+          </tr>
+          <tr>
+             <td> <img src="/pics/lec_3.jpg"></td>
+          </tr>
+       </table>
+       </div>
+      </div>
+     </div> <!-- end of popup-->
    </div> <!-- end of current button --> 
 
 
@@ -145,6 +192,7 @@
           </button>
         </div>
         <div class="modal-body">
+
           <p>Added at 5:20</p>
           <input type="text" class="form-control" id="filter" value="Add a note">
           <div class="modal-footer">
@@ -159,7 +207,7 @@
   <!--Scripts-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
-	<script src="/js/note.js"></script>
+	<script src="/js/note_b.js"></script>
 
 </body>
 </html>
