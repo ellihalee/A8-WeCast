@@ -204,6 +204,10 @@ width: 100%;
     width: 80%;
 }
 
+.modal-backdrop {
+	z-index: -1;
+}
+
 /* The Close Button */
 .close {
     color: black;
