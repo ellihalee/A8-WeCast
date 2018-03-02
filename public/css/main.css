@@ -10,16 +10,15 @@
 }
 
 h4 {
-	display: inline;
+	display: inline-block;
 }
 
 .page-title {
-	margin-bottom: 30px;
 	text-align: center;
 }
 
 .folder-title {
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 	text-align: left;
 }
 
@@ -30,6 +29,8 @@ h4 {
 
 body { 
     padding-top: 65px; /* To make sure the nav doesn't cover the content */  
+    overflow-y: hidden;
+
 }
 
 .add {
@@ -40,19 +41,23 @@ body {
 
 
 .settings {
-	display:inline-block;
+  position: relative;
+  float: right;
+  padding-left: 5px;
 }
 
 .sync {
-	display:inline-block;
-	margin-left:110px;
-	margin-right:10px;
+  position: relative;
+  float: right;
 }
 
 .back {
 	position:fixed;
 	bottom:4%;
 	left: 5%;
+}
+#time {
+	margin-top: -5px;
 }
 /*login page layout */ 
 #login_center{ /*login text in the navbar */
@@ -111,9 +116,9 @@ body {
 	margin-left: 20px;
 }
 #wrapper {
-	height:100%;
+   height:100%;
    width: 100%;
-   margin: 0;
+   margin-top: 5%;
    padding: 0;
    border: 0;
 }
@@ -124,41 +129,171 @@ body {
 	text-align: center;
 }
 
-.fifth_row {
-width: 100%;
+#myBtn{
+
+	margin-top: 15%;
+
 }
 
-#round_bookmark {
-	padding-top:10px;
-	margin-right:10px;
-	padding-top:5%;
-} 
+/** create account */
 
-#round_camera {
-	position:relative;
-	padding-top: 10px;
-	margin-left:10px;
-	padding-top:5%;
+/* The Modal (background) */
+#myBtn {
+	margin-top: 5%;
+	border: 1px solid #fdb41c;
+	background-color: #d3d3d3;
 }
 
-#the_5th_row {
-	margin: auto;
-	margin-top: 10px;
-	padding-top:5%;
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
-#mic_btn {
-	padding-left: 5%;
-	padding-top:10px;
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
 }
 
-#recording_btn{
-	position: relative;
-	padding-left: 10%;
+.modal-backdrop {
+	z-index: -1;
 }
 
-#done_btn {
-	position: relative;
-	padding-top:15px;
+/* The Close Button */
+.close {
+    color: black;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
 }
 
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.confirm_btn {
+	margin-top: 5%;
+	border: 1px solid #fdb41c;
+	background-color: #fdb41c;
+}
+
+/*for notes */
+#wrapper_btn {
+   margin-top: 5%;
+   height:100%;
+   width: 100%;
+   padding: 0;
+   border: 0;
+}
+
+#wrapper_btn td {
+	float: center;
+
+	text-align: center;
+}
+
+/* for Note_B style */
+/* Style the tab */
+#wrapper_tab {
+   height:100%;
+   width: 100%;
+   padding: 0;
+   border: 0;
+
+}
+
+#wrapper_tab th {
+	vertical-align: middle;
+	text-align: center;
+}
+
+#wrapper img {
+	vertical-align: middle;
+	margin: 0 auto;
+}
+
+
+
+/* only the tab header */
+.tab {
+	margin: 0 auto;
+ 	max-width:800px;
+ 	max-height:50px;
+  	width: auto;
+  	height: auto;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+
+
+/* Style the buttons inside the tab */
+.tab button {
+	text-align: center;
+	max-width:800px;
+	max-height:50px;
+	width: auto;
+	height: auto;
+    background-color: inherit;
+
+    border: none;
+    outline: none;
+    cursor: pointer;
+    /*padding: 14px 16px; */
+    transition: 0.3s;
+    font-size: 15px;
+    font-style: black; 
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+	margin: 0 auto;
+    display: none;
+    max-height: 220px;
+    width: 80%;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    overflow:scroll;
+}
+
+.navbar{
+	position: fixed;
+}
+
+#picture img {
+  display: block;
+  max-width:100%;
+  max-height:100%;
+  width: auto;
+  height: auto;
+  padding-top:5%;
+}
+
+/*End style*/
