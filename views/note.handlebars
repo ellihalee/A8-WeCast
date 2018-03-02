@@ -53,7 +53,7 @@
           <td><img src = "/pics/recording_bar.png" width = "270" height = "170"></td>
         </tr>
         <tr>
-          <td><h2>5:20</h2></td> <!--recording time--> 
+          <td id ="time"><h2>5:20</h2></td> <!--recording time--> 
         </tr>
         <tr>
           <td> <img src = "/pics/reminder.png" width = "275" height = "34"></td>
@@ -61,46 +61,49 @@
         </table>
       </div>
 
-      <div class = "fifth_row">
-       <div class="row"> <!-- bookmark and camera button -->
-        <div class = "col-xs-3"></div>
-        <div class = "col-xs-3" id ="round_bookmark">
-          <a href = "#bookmark" class="modal-toggle" data-toggle="modal" data-target="#bookmark">
-            <img src = "/pics/round_bookmark.png" width = "70" height = "70">
-          </a>
-        </div>
-        <div class = "col-xs-3" id = "round_camera">
-          <a href="#camera" class="modal-toggle" data-toggle="modal" data-target="#camera">
-            <img src = "/pics/round_camera.png" width = "70" height = "70">
-          </a>
-        </div>
-        <div class = "col-xs-3"></div>
-      </div>
-        
-       </div>
-
-       <div class = "row" id = "the_5th_row"> <!-- recording, audio, done button -->
-        <div class = "col-xs-4" id = "mic_btn">
-          <div class = "col-xs-2"></div>
-          <div class = "col-xs-2">
-            <img src = "/pics/round_audio.png" width = "70" height = "70" id="roundAudio">
-            <img src = "/pics/round_audio_muted.png" width = "70" height = "70" id="roundAudio2">
-          </div>
-        </div>
-        <div class = "col-xs-4" id = "recording_btn">
-            <img src = "/pics/red_record.png" width = "80" height = "80" id="recordButton">
-            <img src = "/pics/red_pause.png" width = "80" height = "80" id="recordButton2">
-
-        </div>
-        <div class = "col-xs-4" id = "done_btn">
-          <div class = "col-xs-2">
-            <a href = "#doneBtn" class="modal-toggle" data-toggle="modal" data-target="#doneBtn">
-              <img src = "/pics/done_btn.png" width = "65" height = "55" id="doneButton">
+       <table id = "wrapper_btn"> <!-- 3/1/2018 edit --> 
+        <tr> 
+          <td></td>
+          <td colspan = "2"></td>
+          <td colspan = "3"></td>
+          <td colspan = "4"></td>
+          <td colspan="5">
+            <a href = "#bookmark" class="modal-toggle" data-toggle="modal" data-target="#bookmark">
+            <img src = "/pics/round_bookmark.png" width = "70" height = "70"></a>
+            </td>
+          <td colspan="6">
+            <a href="#camera" class="modal-toggle" data-toggle="modal" data-target="#camera">
+              <img src = "/pics/round_camera.png" width = "70" height = "70">
             </a>
-          </div>
-          <div class = "col-xs-2"></div>
-        </div>
-       </div>
+          </td>
+          <td colspan="7"></td>
+         <td colspan="8"></td>
+         <td colspan="9"></td>
+         <td colspan="10"></td>
+        </tr>
+      </table>
+
+      <table id= "wrapper_btn"> 
+        <tr>
+          <td></td>
+          <td colspan = "2"></td>
+          <td colspan = "3"></td>
+          <td colspan = "4">
+            <a href = "/note_function"><img src = "/pics/round_audio.png" width = "70" height = "70" id="roundAudio"></a>
+          </td>
+          <td colspan="5">
+            <img src = "/pics/red_record.png" width = "70" height = "70" id="recordButton">
+            <img src = "/pics/red_pause.png" width = "70" height = "70" id="recordButton2">
+            </td>
+          <td colspan="6">
+            <a href = "/note_function"><img src = "/pics/done_btn.png" width = "65" height = "55" id="doneButton"></a>
+          </td>
+          <td colspan="7"></td>
+         <td colspan="8"></td>
+         <td colspan="9"></td>
+         <td colspan="10"></td>
+        </tr>
+      </table>
 
    </div> <!-- end of current button --> 
 

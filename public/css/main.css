@@ -14,7 +14,6 @@ h4 {
 }
 
 .page-title {
-	margin-bottom: 30px;
 	text-align: center;
 }
 
@@ -57,7 +56,9 @@ body {
 	bottom:4%;
 	left: 5%;
 }
-
+#time {
+	margin-top: -5px;
+}
 /*login page layout */ 
 #login_center{ /*login text in the navbar */
 	width: 100%;
@@ -134,44 +135,6 @@ body {
 
 }
 
-.fifth_row {
-width: 100%;
-}
-
-#round_bookmark {
-	padding-top:10px;
-	margin-right:10px;
-	padding-top:5%;
-} 
-
-#round_camera {
-	position:relative;
-	padding-top: 10px;
-	margin-left:10px;
-	padding-top:5%;
-}
-
-#the_5th_row {
-	margin: auto;
-	margin-top: 10px;
-	padding-top:5%;
-}
-
-#mic_btn {
-	padding-left: 5%;
-	padding-top:10px;
-}
-
-#recording_btn{
-	position: relative;
-	padding-left: 10%;
-}
-
-#done_btn {
-	position: relative;
-	padding-top:15px;
-}
-
 /** create account */
 
 /* The Modal (background) */
@@ -229,6 +192,21 @@ width: 100%;
 	background-color: #fdb41c;
 }
 
+/*for notes */
+#wrapper_btn {
+   margin-top: 5%;
+   height:100%;
+   width: 100%;
+   padding: 0;
+   border: 0;
+}
+
+#wrapper_btn td {
+	float: center;
+
+	text-align: center;
+}
+
 /* for Note_B style */
 /* Style the tab */
 #wrapper_tab {
@@ -248,6 +226,8 @@ width: 100%;
 	vertical-align: middle;
 	margin: 0 auto;
 }
+
+
 
 /* only the tab header */
 .tab {
