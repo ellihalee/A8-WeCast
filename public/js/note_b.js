@@ -73,6 +73,18 @@ $("#recordButton2").click(function() {
   $("#recordButton").show();
 });
 
+$("#roundAudio").click(function() {
+  //Change buttons
+  $("#roundAudio2").show();
+  $("#roundAudio").hide();
+});
+
+$("#roundAudio2").click(function() {
+  //Change buttons
+  $("#roundAudio").show();
+  $("#roundAudio2").hide();
+});
+
 //Done button pressed
 function doneFunction(){
 
@@ -108,5 +120,6 @@ function openTab(evt, twoContent) {
 function initializePage(){
 	console.log("Javascript connected!");  
   $("#recordButton2").hide();
+  $("#roundAudio2").hide();
   $(".tab").hide();
 }
